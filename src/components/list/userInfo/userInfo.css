@@ -5,10 +5,13 @@
     justify-content: space-between;
 }
 
+
+
 .user{
     display: flex;
     align-items: center;
     gap: 20px;
+
 
     img{
         width: 40px;
@@ -21,85 +24,11 @@
 .icons{
     display: flex;
     gap: 10px;
+    
 
     img{
         width: 20px;
         height: 20px;
         cursor: pointer;
-    }
-}
-
-/* Tablet breakpoint */
-@media (max-width: 768px) {
-    .userInfo {
-        padding: 8px;
-    }
-    
-    .user {
-        gap: 15px;
-        
-        img {
-            width: 36px;
-            height: 36px;
-        }
-    }
-    
-    .icons {
-        gap: 8px;
-        
-        img {
-            width: 18px;
-            height: 18px;
-        }
-    }
-}
-
-/* Mobile breakpoint */
-@media (max-width: 480px) {
-    .userInfo {
-        padding: 6px;
-    }
-    
-    .user {
-        gap: 12px;
-        
-        img {
-            width: 32px;
-            height: 32px;
-        }
-    }
-    
-    .icons {
-        gap: 6px;
-        
-        img {
-            width: 16px;
-            height: 16px;
-        }
-    }
-}
-
-/* Very small screens */
-@media (max-width: 320px) {
-    .userInfo {
-        padding: 5px;
-    }
-    
-    .user {
-        gap: 10px;
-        
-        img {
-            width: 28px;
-            height: 28px;
-        }
-    }
-    
-    .icons {
-        gap: 5px;
-        
-        img {
-            width: 14px;
-            height: 14px;
-        }
     }
 }
