@@ -1,7 +1,8 @@
 .chatList{
     flex:1;
-   overflow-y: auto;
-   overflow-x: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
+    
     .search{
         display: flex;
         align-items: center;
@@ -9,43 +10,37 @@
         padding: 20px;
     
 
-    .searchBar{
-        flex:1;
-        background-color: #567d95eb;
-        display: flex;
-        align-items: center;
-        gap: 20px;
-        border-radius: 10px;
-        padding: 10px;
-
-        input{
-            background-color: transparent;
-            border: none;
-            outline: none;
-            color: white;
+        .searchBar{
             flex:1;
-            
-            
-            
-        }
-        input::placeholder{
-            color: white;
-            
-            
-        }
+            background-color: #567d95eb;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            border-radius: 10px;
+            padding: 10px;
 
-        
+            input{
+                background-color: transparent;
+                border: none;
+                outline: none;
+                color: white;
+                flex:1;
+            }
+            
+            input::placeholder{
+                color: white;
+            }
 
-        img{
-            width: 20px;
-            height: 20px;
+            img{
+                width: 20px;
+                height: 20px;
+            }
         }
-    }
         
         .add{
             width: 36px;
             height: 36px;
-            background-color: #567d95eb;;
+            background-color: #567d95eb;
             padding: 10px;
             border-radius: 10px;
             cursor: pointer;
@@ -66,6 +61,7 @@
             border-radius: 50%;
             object-fit: cover;
         }
+        
         .texts{
             display: flex;
             flex-direction: column;
@@ -74,6 +70,7 @@
             span{
                 font-weight: 500;
             }
+            
             p{
                 font-weight: 300;
                 font-size: 14px;
@@ -81,5 +78,147 @@
         }
     }
 }
-    
-    
+
+/* Tablet breakpoint */
+@media (max-width: 768px) {
+    .chatList {
+        .search {
+            gap: 15px;
+            padding: 15px;
+            
+            .searchBar {
+                gap: 15px;
+                padding: 8px;
+                
+                img {
+                    width: 18px;
+                    height: 18px;
+                }
+            }
+            
+            .add {
+                width: 34px;
+                height: 34px;
+                padding: 9px;
+            }
+        }
+        
+        .item {
+            gap: 15px;
+            padding: 15px;
+            
+            img {
+                width: 45px;
+                height: 45px;
+            }
+            
+            .texts {
+                gap: 8px;
+                
+                span {
+                    font-size: 15px;
+                }
+                
+                p {
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+}
+
+/* Mobile breakpoint */
+@media (max-width: 480px) {
+    .chatList {
+        .search {
+            gap: 12px;
+            padding: 12px;
+            
+            .searchBar {
+                gap: 12px;
+                padding: 6px;
+                
+                img {
+                    width: 16px;
+                    height: 16px;
+                }
+            }
+            
+            .add {
+                width: 32px;
+                height: 32px;
+                padding: 8px;
+            }
+        }
+        
+        .item {
+            gap: 12px;
+            padding: 12px;
+            
+            img {
+                width: 40px;
+                height: 40px;
+            }
+            
+            .texts {
+                gap: 6px;
+                
+                span {
+                    font-size: 14px;
+                }
+                
+                p {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+
+/* Very small screens */
+@media (max-width: 320px) {
+    .chatList {
+        .search {
+            gap: 10px;
+            padding: 10px;
+            
+            .searchBar {
+                gap: 10px;
+                padding: 5px;
+                
+                img {
+                    width: 14px;
+                    height: 14px;
+                }
+            }
+            
+            .add {
+                width: 30px;
+                height: 30px;
+                padding: 7px;
+            }
+        }
+        
+        .item {
+            gap: 10px;
+            padding: 10px;
+            
+            img {
+                width: 35px;
+                height: 35px;
+            }
+            
+            .texts {
+                gap: 5px;
+                
+                span {
+                    font-size: 13px;
+                }
+                
+                p {
+                    font-size: 11px;
+                }
+            }
+        }
+    }
+}

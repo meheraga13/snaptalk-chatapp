@@ -1,113 +1,340 @@
-.detail{
-    flex:1;
-   
-    .user{
-        padding: 20px 10px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+.detail {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+}
+
+.detail .user {
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid #dddddd6f;
+    flex-shrink: 0;
+}
+
+.detail .user img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.detail .user h2 {
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    margin: 0;
+}
+
+.detail .user p {
+    font-size: 14px;
+    color: lightgray;
+    font-weight: 300;
+    text-align: center;
+    margin: 0;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.detail .info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    flex: 1;
+    overflow: hidden;
+}
+
+.detail .info .option {
+    display: flex;
+    flex-direction: column;
+}
+
+.detail .info .option .title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.detail .info .option .title span {
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.detail .info .option .title img {
+    width: 30px;
+    height: 30px;
+    background-color: #3d6b88fd;
+    padding: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: background-color 0.2s ease;
+}
+
+.detail .info .option .title img:hover {
+    background-color: #2a5a7a;
+}
+
+.detail .info .option .photos {
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.detail .info .option .photos .photoItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.detail .info .option .photos .photoItem .photoDetail {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-grow: 1;
+    min-width: 0;
+}
+
+.detail .info .option .photos .photoItem .photoDetail img {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    object-fit: cover;
+    position: relative;
+    z-index: 1;
+    flex-shrink: 0;
+}
+
+.detail .info .option .photos .photoItem .photoDetail span {
+    font-size: 14px;
+    color: lightgray;
+    font-weight: 300;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.detail .info .option .photos .photoItem .icon {
+    width: 30px;
+    height: 30px;
+    background-color: #3d6b88fd;
+    padding: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: background-color 0.2s ease;
+}
+
+.detail .info .option .photos .photoItem .icon:hover {
+    background-color: #2a5a7a;
+}
+
+.detail .info button {
+    padding: 10px 15px;
+    background-color: rgba(230, 74, 105, 0.634);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+    margin-top: 10px;
+}
+
+.detail .info button:hover {
+    background-color: rgba(225, 28, 67, 0.842);
+}
+
+.detail .info button.logout {
+    padding: 10px 15px;
+    background-color: #1a73e8;
+    font-size: 14px;
+}
+
+.detail .info button.logout:hover {
+    background-color: #1557b0;
+}
+
+/* Tablet breakpoint */
+@media (max-width: 768px) {
+    .detail {
+        border-left: none;
+        border-right: none;
+    }
+    
+    .detail .user {
+        padding: 15px 8px;
+        gap: 8px;
+    }
+    
+    .detail .user img {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .detail .user h2 {
+        font-size: 18px;
+    }
+    
+    .detail .user p {
+        font-size: 13px;
+    }
+    
+    .detail .info {
+        padding: 15px;
+        gap: 20px;
+    }
+    
+    .detail .info .option .title span {
+        font-size: 15px;
+    }
+    
+    .detail .info .option .title img {
+        width: 28px;
+        height: 28px;
+        padding: 7px;
+    }
+    
+    .detail .info .option .photos {
+        gap: 12px;
+        margin-top: 15px;
+    }
+    
+    .detail .info .option .photos .photoItem .photoDetail {
+        gap: 12px;
+    }
+    
+    .detail .info .option .photos .photoItem .photoDetail img {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .detail .info .option .photos .photoItem .photoDetail span {
+        font-size: 13px;
+    }
+    
+    .detail .info .option .photos .photoItem .icon {
+        width: 28px;
+        height: 28px;
+        padding: 7px;
+    }
+    
+    .detail .info button {
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+}
+
+/* Mobile breakpoint */
+@media (max-width: 480px) {
+    .detail .user {
+        padding: 12px 6px;
+        gap: 6px;
+    }
+    
+    .detail .user img {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .detail .user h2 {
+        font-size: 16px;
+    }
+    
+    .detail .user p {
+        font-size: 12px;
+    }
+    
+    .detail .info {
+        padding: 12px;
+        gap: 15px;
+    }
+    
+    .detail .info .option .title span {
+        font-size: 14px;
+    }
+    
+    .detail .info .option .title img {
+        width: 25px;
+        height: 25px;
+        padding: 6px;
+    }
+    
+    .detail .info .option .photos {
         gap: 10px;
-        border-bottom: 1px solid #dddddd6f;
-
-        img{
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            object-fit: cover;
-        }
-        h2{
-            font-size: 20px;
-            font-weight: 500;
-        }
-
-        p{
-            font-size: 14px;
-            color: lightgray;
-            font-weight: 300;
-        
-        }
+        margin-top: 12px;
     }
-    .info{
-        padding: 20px;
-        display: flex;
-        flex-direction: column;
-        gap: 25px;
-
-        .option{
-
-            .title{
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-
-                img{
-                    width: 30px;
-                    height: 30px;
-                    background-color: #3d6b88fd;
-                    padding: 10px;
-                    border-radius: 50%;
-                    cursor: pointer;
-                }
-            }
-            .photos{
-                display: flex;
-                gap: 20px;
-                flex-direction: column;
-                margin-top: 20px;
-
-                .photoItem{
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-                    .photoDetail{
-                        display: flex;
-                        align-items: center;
-                        gap:20px;
-                        flex-grow: 1;
-                        img{
-                            width: 40px;
-                            height: 40px;
-                            border-radius: 5px;
-                            object-fit: cover;
-                            position: relative;
-                            z-index: 1;
-                        }
-                        span{
-                            font-size:14px;
-                            color: lightgray;
-                            font-weight: 300;
-                        }
-                    }
-
-                    .icon{
-                        width: 30px;
-                        height: 30px;
-                        background-color: #3d6b88fd;
-                        padding: 10px;
-                        border-radius: 50%;
-                        cursor: pointer;
-
-                    }
-                }
-               
-            }
-        }
-        button{
-            padding: 5px 5px;
-            background-color: rgba(230, 74, 105, 0.634);
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-
-            &:hover{
-                background-color: rgba(225, 28, 67, 0.842);
-            }
-            &.logout{
-                padding: 4px;
-                background-color: #1a73e8;
-            }
-        }
-
+    
+    .detail .info .option .photos .photoItem {
+        gap: 8px;
     }
+    
+    .detail .info .option .photos .photoItem .photoDetail {
+        gap: 10px;
     }
+    
+    .detail .info .option .photos .photoItem .photoDetail img {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .detail .info .option .photos .photoItem .photoDetail span {
+        font-size: 12px;
+    }
+    
+    .detail .info .option .photos .photoItem .icon {
+        width: 25px;
+        height: 25px;
+        padding: 6px;
+    }
+    
+    .detail .info button {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+}
+
+/* Very small screens */
+@media (max-width: 320px) {
+    .detail .user {
+        padding: 10px 5px;
+    }
+    
+    .detail .user img {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .detail .user h2 {
+        font-size: 15px;
+    }
+    
+    .detail .info {
+        padding: 10px;
+        gap: 12px;
+    }
+    
+    .detail .info .option .photos .photoItem .photoDetail img {
+        width: 28px;
+        height: 28px;
+    }
+    
+    .detail .info .option .photos .photoItem .photoDetail span {
+        font-size: 11px;
+    }
+}

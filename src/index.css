@@ -6,27 +6,120 @@
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
-body{
+body {
   background-image: url("/bg.jpg");
-  display:flex;
-  align-items:center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
   justify-content: center;
-  height: 100vh;
-  color:white;
+  min-height: 100vh;
+  color: white;
+  padding: 20px;
 }
-.container{
-  width:80vw;
-  height:90vh;
-  background-color:#567d95eb;
+
+.container {
+  width: min(80vw, 1200px);
+  height: min(90vh, 800px);
+  max-width: 100%;
+  max-height: 100%;
+  background-color: #567d95eb;
   backdrop-filter: blur(16px) saturate(180%);
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.125);
-  display:flex;
+  display: flex;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
 
-.loading{
+.loading {
   padding: 40px;
   font-size: 36px;
   border-radius: 10px;
   background-color: #567d95eb;
+  backdrop-filter: blur(16px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* Tablet breakpoint */
+@media (max-width: 768px) {
+  body {
+    padding: 15px;
+  }
+  
+  .container {
+    width: min(95vw, 100%);
+    height: min(95vh, 100%);
+    border-radius: 8px;
+  }
+  
+  .loading {
+    padding: 30px;
+    font-size: 28px;
+    border-radius: 8px;
+  }
+}
+
+/* Mobile breakpoint */
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+  
+  .container {
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+    border: none;
+    margin: -10px;
+  }
+  
+  .loading {
+    padding: 20px;
+    font-size: 24px;
+    border-radius: 6px;
+    max-width: 90vw;
+  }
+}
+
+/* Very small screens */
+@media (max-width: 320px) {
+  .loading {
+    padding: 15px;
+    font-size: 20px;
+  }
+}
+
+/* Landscape orientation on mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+  body {
+    padding: 5px;
+  }
+  
+  .container {
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+    margin: -5px;
+  }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  body {
+    background-attachment: scroll; /* Better performance on high DPI */
+  }
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
